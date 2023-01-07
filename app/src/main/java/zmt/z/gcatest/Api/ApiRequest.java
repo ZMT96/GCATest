@@ -8,5 +8,4 @@ public interface ApiRequest {
 
     @GET("latest")
     Call<Currencies> getCurrencies();
-
 }

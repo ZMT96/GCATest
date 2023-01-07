@@ -1,6 +1,7 @@
 package zmt.z.gcatest;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         apiRequest= ApiUtil.getApiRequest();
         apiRequest.getCurrencies().enqueue(new Callback<Currencies>() {
+            @SuppressLint("SuspiciousIndentation")
             @Override
             public void onResponse(Call<Currencies> call, Response<Currencies> response) {
                 if(response.isSuccessful()){
@@ -65,5 +67,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Offline!", Toast.LENGTH_SHORT).show();
             }
         });
+        //kasmdfa;lk
     }
 }
